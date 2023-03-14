@@ -69,7 +69,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 29);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Connect";
+            this.button1.Text = "Connect to DB";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
