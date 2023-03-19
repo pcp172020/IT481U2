@@ -1,3 +1,6 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Xml.Serialization;
+
 namespace Pablo_Palacios_Unit2_IT481
 {
     public partial class Form1 : Form
@@ -22,7 +25,7 @@ namespace Pablo_Palacios_Unit2_IT481
 
         private void button1_Click(object sender, EventArgs e)
         {
-            database = new Controller("Server = MOQ8RUQ4\\SQLEXPRESS; " +
+            database = new Controller("Server = LAPTOP-MOQ8RUQ4\\SQLEXPRESS; " +
                                                "Trusted_Connection=true;" +
                                                "Database=northwind;" +
                                                "User Instance=false;" +
@@ -47,6 +50,7 @@ namespace Pablo_Palacios_Unit2_IT481
             MessageBox.Show(names, "Company names");
 
         }
+        
        
     }
 }

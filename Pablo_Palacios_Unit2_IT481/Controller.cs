@@ -1,18 +1,23 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Pablo_Palacios_Unit2_IT481
 {
-    class Controller
+    internal class Controller
     {
         string connectionString;
         SqlConnection cnn = null;
         public Controller()
         {
-            connectionString = "Server = MOQ8RUQ4\\SQLEXPRESS; " +
+            connectionString = "Server = LAPTOP-MOQ8RUQ4\\SQLEXPRESS; " +
                                         "Trusted_Connection=true;" +
                                         "Database=Northwind;" +
                                         "User Instance=false;" +
-                                        "Connection timmeout=30";
+                                        "Connection timeout=30";
         }
 
         //Constructor that takes DB Connection string
@@ -60,13 +65,15 @@ namespace Pablo_Palacios_Unit2_IT481
             {
                 try
                 {
-                    names = names + dataReader.GetVallue(0) + "\n";
+                    names = names + dataReader.GetValue(0) + "\n";
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
             }
+
+            return names;
         }
     }
 }
